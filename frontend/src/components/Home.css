@@ -1,0 +1,125 @@
+/* ===========================
+   Root Container
+=========================== */
+#home-container {
+  min-height: 100vh;         /* Full viewport height*/
+  min-width: 208vh;            /* Full width */
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  box-sizing: border-box;      /* Include padding in width */
+  color: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===========================
+   Title & Subtitle
+=========================== */
+#app-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#app-subtitle {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 30px;
+  opacity: 0.85;
+}
+
+/* ===========================
+   Form Container
+=========================== */
+#language-form {
+  display: flex;
+  flex-wrap: wrap;           /* Stack on small screens */
+  gap: 20px;
+  justify-content: center;   /* Center horizontally */
+  width: 100%;               /* Full width */
+  max-width: 700px;          /* Limit width on large screens */
+}
+
+/* ===========================
+   Language Cards
+=========================== */
+.language-card {
+  flex: 1 1 280px;           /* Grow, shrink, minimum width */
+  max-width: 100%;
+  min-width: 200px;
+  background: #ffffff;
+  color: #333333;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.language-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Heading */
+.language-card h2 {
+  margin-bottom: 15px;
+}
+
+/* Select Dropdown */
+.language-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+/* ===========================
+   Button
+=========================== */
+#start-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  width: 100%;                  /* Full width */
+  max-width: 300px;             /* Limit width on large screens */
+  font-size: 1rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#start-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 198, 255, 0.4);
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+@media (max-width: 600px) {
+  #app-title {
+    font-size: 2rem;
+  }
+
+  #app-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .language-card {
+    flex: 1 1 100%;       /* Stack vertically */
+    min-width: auto;
+  }
+
+  #start-btn {
+    max-width: 100%;       /* Full width on mobile */
+  }
+}
